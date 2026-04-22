@@ -1,0 +1,39 @@
+=> for setting name , email etc
+git config --global user.name "Umair Farooq"
+git config --global user.email "mirumair7893@gmail.com
+git config --global --list
+git commit --m "message"
+
+=>method1
+create a folder
+git init (initialize a repo) 
+git add . (to add all the files)
+git commit --m "added code" (to save changes)
+git remote add origin [link]
+git checkout -b feature1 (feature1 is name of switched branch)       
+git switch main (switching back to main)
+git branch -M main
+git push -u origin main
+
+=>method2
+create a repo
+upload files directly
+or create files in repo and upload codes
+
+=>method3 
+if already repo is there then 
+clone it
+    git clone<repo-link>
+add changes
+    git add .
+commit
+push
+
+ctrl shift => git graph => fetching remote
+> git rebase main
+
+
+
+git push origin main
+
+git push origin main --force
