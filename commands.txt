@@ -10,10 +10,13 @@ git init (initialize a repo)
 git add . (to add all the files)
 git commit --m "added code" (to save changes)
 git remote add origin [link]
+git push -u origin main
+git rebase main
+git push origin main
+
+
 git checkout -b feature1 (feature1 is name of switched branch)       
 git switch main (switching back to main)
-git branch -M main
-git push -u origin main
 
 =>method2
 create a repo
@@ -30,10 +33,4 @@ commit
 push
 
 ctrl shift => git graph => fetching remote
-> git rebase main
 
-
-
-git push origin main
-
-git push origin main --force
