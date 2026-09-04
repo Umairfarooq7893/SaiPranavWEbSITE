@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+```
+<title>SaiPranav Hostel - Student Dashboard</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f1f5f9;
+        color: #1e293b;
+    }
+
+    /* Header */
+
+    .header {
+        background: #1e40af;
+        color: white;
+
+        padding: 20px 40px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .logout-btn {
+        background: white;
+        color: #1e40af;
+
+        border: none;
+        padding: 10px 18px;
+
+        border-radius: 6px;
+
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .logout-btn:hover {
+        background: #e2e8f0;
+    }
+
+    /* Welcome section */
+
+    .welcome {
+        padding: 30px 40px;
+    }
+
+    .welcome h2 {
+        margin-bottom: 8px;
+    }
+
+    .welcome p {
+        color: #64748b;
+    }
+
+    /* Dashboard */
+
+    .dashboard {
+        padding: 0 40px 40px;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 25px;
+    }
+
+    /* Cards */
+
+    .card {
+        background: white;
+
+        padding: 30px;
+
+        border-radius: 12px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+        text-align: center;
+
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-icon {
+        font-size: 40px;
+
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        color: #64748b;
+
+        font-size: 14px;
+
+        margin-bottom: 20px;
+    }
+
+    .card button {
+        background: #2563eb;
+
+        color: white;
+
+        border: none;
+
+        padding: 10px 20px;
+
+        border-radius: 6px;
+
+        cursor: pointer;
+    }
+
+    .card button:hover {
+        background: #1d4ed8;
+    }
+
+    /* Footer */
+
+    .footer {
+        text-align: center;
+
+        padding: 20px;
+
+        color: #64748b;
+
+        font-size: 14px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+
+        .dashboard {
+            grid-template-columns: repeat(2, 1fr);
+
+            padding: 0 20px 30px;
+        }
+
+        .header {
+            padding: 20px;
+        }
+
+        .welcome {
+            padding: 25px 20px;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        .dashboard {
+            grid-template-columns: 1fr;
+        }
+
+        .header h1 {
+            font-size: 18px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Header -->
+
+<header class="header">
+
+    <h1>🏠 SaiPranav Hostel</h1>
+
+    <button class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+
+<!-- Welcome -->
+
+<section class="welcome">
+
+    <h2>Welcome, Student 👋</h2>
+
+    <p>
+        Manage your hostel information from your dashboard.
+    </p>
+
+</section>
+
+
+<!-- Dashboard Cards -->
+
+<main class="dashboard">
+
+
+    <!-- Profile -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            👤
+        </div>
+
+        <h3>Profile</h3>
+
+        <p>
+            View your personal and student information.
+        </p>
+
+        <a href="profile.html">
+            <button>View Profile</button>
+        </a>
+
+    </div>
+
+
+    <!-- Room -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            🛏️
+        </div>
+
+        <h3>Room Details</h3>
+
+        <p>
+            Check your room number, bed number and roommates.
+        </p>
+
+        <a href="room.html">
+            <button>View Room</button>
+        </a>
+
+    </div>
+
+
+    <!-- Mess -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            🍛
+        </div>
+
+        <h3>Mess Menu</h3>
+
+        <p>
+            Check today's breakfast, lunch, snacks and dinner.
+        </p>
+
+    <a href="mess.html">
+        <button>View Menu</button>
+    </a>
+
+    </div>
+
+
+    <!-- Complaints -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            📝
+        </div>
+
+        <h3>Complaints</h3>
+
+        <p>
+            Submit and track your hostel complaints.
+        </p>
+
+        <a href="complaints.html">
+            <button>Submit Complaint</button>
+        </a>
+
+    </div>
+
+
+    <!-- Announcements -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            📢
+        </div>
+
+        <h3>Announcements</h3>
+
+        <p>
+            View important hostel announcements and notices.
+        </p>
+
+        <a href="announcements.html">
+            <button>View Announcements</button>
+        </a>
+
+    </div>
+
+
+    <!-- Fees -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            💰
+        </div>
+
+        <h3>Fee Management</h3>
+
+        <p>
+            Check your hostel fee payment status.
+        </p>
+
+        <a href="fees.html">
+            <button>View Fee Status</button>
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    © 2026 SaiPranav Hostel Management System
+
+</footer>
+```
+
+</body>
+
+</html>

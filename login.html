@@ -1,29 +1,309 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>SaiPranav Hostel - Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>SaiPranav Hostel - Login</title>
+
+<style>
+
+    /* Remove default spacing */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Full page */
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    }
+
+    /* Main container */
+    .container {
+        width: 900px;
+        min-height: 520px;
+
+        display: flex;
+
+        background: white;
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Left side */
+    .welcome-section {
+        width: 50%;
+
+        padding: 60px 45px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+
+        color: white;
+    }
+
+    .welcome-section h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .welcome-section h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Right side */
+    .login-section {
+        width: 50%;
+
+        padding: 60px 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-section h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #1e293b;
+
+        margin-bottom: 35px;
+    }
+
+    /* Input group */
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-size: 15px;
+        font-weight: bold;
+
+        color: #334155;
+    }
+
+    .input-group input {
+        width: 100%;
+
+        padding: 14px;
+
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+
+        font-size: 15px;
+
+        outline: none;
+
+        transition: 0.3s;
+    }
+
+    /* Input focus effect */
+    .input-group input:focus {
+        border-color: #2563eb;
+
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    /* Login button */
+    .login-btn {
+        width: 100%;
+
+        padding: 14px;
+
+        border: none;
+        border-radius: 8px;
+
+        background: #2563eb;
+        color: white;
+
+        font-size: 16px;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    .login-btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+    }
+
+    /* Forgot password */
+    .forgot-password {
+        text-align: right;
+
+        margin-bottom: 20px;
+    }
+
+    .forgot-password a {
+        color: #2563eb;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .forgot-password a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer text */
+    .footer {
+        text-align: center;
+
+        margin-top: 25px;
+
+        font-size: 13px;
+
+        color: #64748b;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 700px) {
+
+        .container {
+            width: 90%;
+            flex-direction: column;
+        }
+
+        .welcome-section,
+        .login-section {
+            width: 100%;
+        }
+
+        .welcome-section {
+            padding: 40px 30px;
+        }
+
+        .login-section {
+            padding: 40px 30px;
+        }
+    }
+
+</style>
+```
+
 </head>
 
 <body>
 
-    <h1>SaiPranav Hostel</h1>
-    <h2>Hostel Management System</h2>
+```
+<div class="container">
 
-    <form>
+    <!-- Welcome Section -->
+    <div class="welcome-section">
 
-        <label>Username:</label>
-        <input type="text" name="username" placeholder="Enter username">
+        <h1>SaiPranav Hostel</h1>
 
-        <br><br>
+        <h2>Hostel Management System</h2>
 
-        <label>Password:</label>
-        <input type="password" name="password" placeholder="Enter password">
+        <p>
+            Welcome to the SaiPranav Hostel portal.
+            Manage your room, mess menu, complaints,
+            announcements and fee information easily
+            from one place.
+        </p>
 
-        <br><br>
+    </div>
 
-        <button type="submit">Login</button>
 
-    </form>
+    <!-- Login Section -->
+    <div class="login-section">
+
+        <h2>Student Login</h2>
+
+        <form>
+
+            <div class="input-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <div class="forgot-password">
+
+                <a href="#">
+                    Forgot Password?
+                </a>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+
+        <div class="footer">
+
+            © 2026 SaiPranav Hostel
+
+        </div>
+
+    </div>
+
+</div>
+```
 
 </body>
+
 </html>
